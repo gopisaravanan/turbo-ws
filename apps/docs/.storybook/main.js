@@ -22,14 +22,14 @@ const config = {
     return {
       ...config,
       define: { "process.env": {} },
-      resolve: {
-        alias: [
-          {
-            find: "ui",
-            replacement: resolve(__dirname, "../../../packages/ui/"),
-          },
-        ],
-      },
+      // resolve: {
+      //   alias: [
+      //     {
+      //       find: "ui",
+      //       replacement: resolve(__dirname, "../../../packages/ui/"),
+      //     },
+      //   ],
+      // },
     };
   },
 

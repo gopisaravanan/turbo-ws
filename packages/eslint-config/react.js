@@ -35,5 +35,8 @@ module.exports = {
   // add rules configurations here
   rules: {
     "import/no-default-export": "off",
+     "react/function-component-definition": "off",
+     "unicorn/filename-case": "off",
+     "@typescript-eslint/no-unsafe-assignment": "off",
   },
 };

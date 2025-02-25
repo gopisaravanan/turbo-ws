@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: theme('colors.neutral.8');
+}
+
+html.dark {
+  background-color: theme('colors.neutral.2');
+  color-scheme: dark;
+}
+
+html.dark .docs-story {
+  background-color: theme('colors.neutral.2');
+}
+
+.toc-wrapper {
+  padding-right: 1rem;
+}
+
+.sb-anchor > h2 {
+  border: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.sb-anchor > h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.sb-anchor > h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.sbdocs kbd {
+  background-color: theme('colors.neutral.6');
+  border-radius: 3px;
+  border: 1px solid theme('colors.neutral.5');
+  box-shadow:
+    0 1px 1px theme('colors.neutral.4'),
+    0 2px 0 0 theme('colors.neutral.7') inset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85em;
+  line-height: 1;
+  padding: 3px 4px 1px;
+  white-space: nowrap;
+}
+
+/*
+This whole styling-the-table thing is dumb.
+Storybook doesn't allow you to easily reuse thier ArgsTable
+block for generic tabular data, and so any use of manual
+tables fail to style in a consistent style.
+
+TODO: Make my own table block for Storybook to allievate this
+pain point. I have lots of things I want to put into tables.
+*/
+.sbdocs .styled-table {
+  border-spacing: 0;
+  color: #2e3438;
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 40px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.sbdocs .styled-table thead tr {
+  border: 0;
+}
+
+.sbdocs .styled-table td {
+  padding: 10px 15px;
+}
+
+.sbdocs .styled-table th {
+  color: rgba(46, 52, 56, 0.75);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  vertical-align: top;
+  text-overflow: ellipsis;
+}
+
+.sbdocs .styled-table tbody {
+  -webkit-filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.1));
+}
